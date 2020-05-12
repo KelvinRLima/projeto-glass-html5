@@ -1,0 +1,70 @@
+﻿<DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Tudo sobre Google Glass</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="_css/specs.css" />
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+
+                <img id="icone" src="_imagens/especificacoes.png" />
+
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmousemove="mudaImagem('home')" onmouseout="mudaImagem('especificacoes')"><a href="index.html">Home</a></li>
+                        <li onmousemove="mudaImagem('especificacoes')" onmouseout="mudaImagem('especificacoes')"><a href="specs.html">Especificações</a></li>
+                        <li onmousemove="mudaImagem('fotos')" onmouseout="mudaImagem('especificacoes')"><a href="fotos.html">Fotos</a></li>
+                        <li onmousemove="mudaImagem('multimidia')" onmouseout="mudaImagem('especificacoes')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmousemove="mudaImagem('contato')" onmouseout="mudaImagem('especificacoes')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Glass > Especificações</h3>
+                            <h1>Raio-X no Google Glass</h1>
+                            <h2>por Kelvin Lima</h2>
+                            <h3 class="direita">Atualizado em 25/Fevereiro/2020</h3>
+                        </hgroup>
+                    </header>
+
+                    <p>
+                        Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+                    </p>
+
+                    <section id="conteudo">
+                        <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa" /> <!--usemap USA UM MAPEAMENTO DE IMAGEM-->
+                        <map name="meumapa">
+                            <!--FAZ UM MAPEAMENTO NA IMAGEM-->
+                            <area shape="poly" coords="183,220,265,208,266,242,186,254" href="google-glass.html#tela" target="janela" alt="tela" /> <!--DELIMITA UMA DETERMINADA AREA (SHAPE="POLY" COORDS="PONTO 1 X, PONTO 1 Y, PONTO 2 X, PONTO 2 Y"), PARA QUE TENHA DETERMINADO COMPORTAMENTO. NESTE CASO O COMPORTAMENTO É DE ABRIR O ARQUIVO google-glass.html DENTRO DO IFRAME "janela"-->
+                            <area shape="circle" coords="158,244,10" href="google-glass.html#camera" target="janela" alt="camera" /> <!--COORDS="PONTO CENTRAL X, PONTO CENTRAL Y, RAIO"-->
+                            <area shape="circle" coords="76,52,10" href="google-glass.html#sensores" target="janela" alt="sensores" />
+                            <area shape="poly" coords="26,170,83,251,82,215,27,144" href="google-glass.html#gadgets" target="janela" alt="gadgets" />
+                        </map>
+                        <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe>   <!--CARREGA OUTRO DOCUMENTO HTML DENTRO DESTE-->
+                    </section>
+
+                </article>
+            </section>
+
+            <footer id="rodape">
+                <p>
+                    Copyright &copy; - by Kelvin Lima<br />
+                    <a href="http://facebook.com" target="_blank">Facebook</a> | <a href="http://twitter.com" target="_blank">Twitter</a>
+                </p>
+            </footer>
+        </div>
+        <script language="javascript" src="_javascript/funcoes.js"></script>
+    </body>
+</html>
